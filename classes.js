@@ -257,6 +257,7 @@ class Monster extends Sprite {
         gsap.to(homete.position, {
           x: recipient.position.x,
           y: recipient.position.y,
+          duration:1.5,
           onComplete: () => {
             // Enemy actually gets hit
             audio.fireballHit.play()
@@ -278,6 +279,7 @@ class Monster extends Sprite {
               duration: 0.08
             })
             renderedSprites.splice(1, 1)
+            
           }
         })
         break
@@ -302,6 +304,7 @@ class Monster extends Sprite {
         gsap.to(hug.position, {
           x: recipient.position.x,
           y: recipient.position.y,
+          duration:1.5,
           onComplete: () => {
             // Enemy actually gets hit
             audio.fireballHit.play()
@@ -347,6 +350,7 @@ class Monster extends Sprite {
         gsap.to(love.position, {
           x: recipient.position.x,
           y: recipient.position.y,
+          duration:1.5,
           onComplete: () => {
             // Enemy actually gets hit
             audio.fireballHit.play()
@@ -372,10 +376,56 @@ class Monster extends Sprite {
         })
         break
       case '결혼하기':
+        const cakeImage = new Image()
+        cakeImage.src = './img/cake.png'
+        const cake = new Sprite({
+          position: {
+            x: this.position.x,
+            y: this.position.y
+          },
+          image: cakeImage,
+          frames: {
+            max: 4,
+            hold: 60
+          },
+          animate: true,
+          rotation
+        })
+        renderedSprites.splice(1, 0, cake)
+
+        gsap.to(cake.position, {
+          x: recipient.position.x,
+          y: recipient.position.y,
+          duration:5,
+          onComplete: () => {
+            // Enemy actually gets hit
+            audio.fireballHit.play()
+            gsap.to(healthBar, {
+              width: recipient.health + '%'
+            })
+
+            gsap.to(recipient.position, {
+              x: recipient.position.x + 10,
+              yoyo: true,
+              repeat: 5,
+              duration: 0.08
+            })
+
+            gsap.to(recipient, {
+              opacity: 0,
+              repeat: 5,
+              yoyo: true,
+              duration: 0.08
+            })
+            renderedSprites.splice(1, 1)
+          }
+        })
         break
       case '쓸데없이 고집 부리기':
       case '누나 말 안듣기':
       case '집에 말도없이 쓸데없는 물건 늘리기':
+
+        console.log('song '+attack.name)
 
         const tl = gsap.timeline()
 

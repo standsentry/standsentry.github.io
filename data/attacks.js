@@ -13,19 +13,19 @@ const attacks = {
   },
   칭찬하기: {
     name: '칭찬하기',
-    damage: 10,
+    damage: 15,
     type: '능글맞게 성빈이를 칭찬합니다.',
     color: 'blue'
   },
   포옹하기: {
     name: '포옹하기',
-    damage: 10,
+    damage: 15,
     type: '　성빈이가 방심한 틈을 타　　　　　　 　꽈악 끌어안습니다',
     color: 'orange'
   },
   사랑고백하기: {
     name: '사랑고백하기',
-    damage: 10,
+    damage: 15,
     type: '기습적으로 사랑고백을 합니다',
     color: 'black'
   },

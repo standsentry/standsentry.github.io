@@ -31,9 +31,9 @@ function showEndScene() {
 
   // 몇 초 후 게임 종료
   setTimeout(() => {
-    alert('게임이 종료되었습니다! 감사합니다!');
+    alert('♥');
     window.location.reload(); // 게임 초기화
-  }, 500000); // 5초 대기
+  }, 5000000); // 5초 대기
 }
 
 function initBattle() {
