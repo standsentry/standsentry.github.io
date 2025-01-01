@@ -13,7 +13,7 @@ const attacks = {
   },
   칭찬하기: {
     name: '칭찬하기',
-    damage: 90,
+    damage: 10,
     type: '능글맞게 성빈이를 칭찬합니다.',
     color: 'blue'
   },
