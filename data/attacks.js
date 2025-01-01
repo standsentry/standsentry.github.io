@@ -31,25 +31,25 @@ const attacks = {
   },
   결혼하기: {
     name: '결혼하기',
-    damage: 90,
+    damage: 20,
     type: '[필살기]\r\n평생토록!(물리기 없음)',
     color: 'red'
   },
   고집부리기: {
     name: '쓸데없이 고집 부리기',
-    damage: 1,
+    damage: 5,
     type: '송성빈이 고집을 부립니다',
     color: 'red'
   },
   누나말안듣기: {
     name: '누나 말 안듣기',
-    damage: 1,
+    damage: 5,
     type: '송성빈이 누나 말 안들어버렸습니다',
     color: 'red'
   },
   집에물건추가하기: {
     name: '집에 말도없이 쓸데없는 물건 늘리기',
-    damage: 1,
+    damage: 5,
     type: '송성빈이 ~',
     color: 'red'
   }

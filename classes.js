@@ -113,7 +113,7 @@ class Monster extends Sprite {
   }
 
   faint() {
-    document.querySelector('#dialogueBox').innerHTML = this.name + ' 는 이가람에게 잡혔다..!'
+    document.querySelector('#dialogueBox').innerHTML = this.name + '은 이가람에게 잡혔다..!'
     gsap.to(this.position, {
       y: this.position.y + 20
     })
@@ -135,7 +135,9 @@ class Monster extends Sprite {
     let rotation = 1
     if (this.isEnemy) rotation = -2.2
 
-    if (recipient.health - attack.damage > 10
+    console.log(recipient.health+'...'+attack.damage+'...'+attack.name)
+//               25              20           
+    if (recipient.health - attack.damage > 1
       && attack.name === '결혼하기'
     ) {
       document.querySelector('#dialogueBox').innerHTML = attack.name + '는 `아직` 송성빈에게 효과가 없어보인다!'
